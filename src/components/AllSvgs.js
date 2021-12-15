@@ -26,7 +26,7 @@ export const PowerBtn = (props) => (
 )
 
 export const LayerLeft = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" style={{ width: "inherit", height: "inherit" }} {...props}>
     <path
       fill={props.fill}
       d="M3 2a1 1 0 0 1 1 1v18a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1Zm17 6a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h12Z"
@@ -35,6 +35,23 @@ export const LayerLeft = (props) => (
 )
 
 export const LayerRight = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={532}
+    height={532}
+    xmlSpace="preserve"
+    {...props}
+  >
+    <path 
+      fill={props.fill}
+      d="M224.334 510.96c8.758 13.709 23.586 21.193 38.721 21.193 8.458 0 17.014-2.338 24.67-7.228 21.358-13.647 27.619-42.032 13.966-63.391l-124.879-195.46 124.879-195.46c13.647-21.365 7.393-49.744-13.966-63.391-21.354-13.642-49.744-7.393-63.392 13.966L83.66 241.362a45.901 45.901 0 0 0 0 49.425L224.334 510.96z" />
+    <path 
+      fill={props.fill}
+      d="M230.454 290.787 371.128 510.96c8.765 13.709 23.587 21.193 38.722 21.193 8.458 0 17.014-2.338 24.67-7.228 21.358-13.647 27.613-42.032 13.966-63.391l-124.885-195.46 124.891-195.46c13.642-21.359 7.393-49.744-13.966-63.391-21.353-13.642-49.743-7.393-63.391 13.966L230.454 241.362a45.877 45.877 0 0 0 0 49.425z" />
+  </svg>
+)
+
+export const LayerRight1 = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       fill={props.fill}

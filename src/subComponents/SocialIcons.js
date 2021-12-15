@@ -6,12 +6,12 @@ const SocialIcons = () => {
    return (
       <Icons>
          <div>
-            <a style={{color: "inherit"}} href='https://github.com/CosminGhirisan' target="_blank" >
+            <a style={{color: "inherit"}} href='https://github.com/CosminGhirisan' target="_blank" rel="noreferrer">
                <GitHub width={25} height={25} fill="currentColor"/>
             </a>
          </div>
          <div>
-            <a style={{color: "inherit"}} href='https://www.linkedin.com/in/cosmin-ghirisan/' target="_blank" >
+            <a style={{color: "inherit"}} href='https://www.linkedin.com/in/cosmin-ghirisan/' target="_blank" rel="noreferrer">
                <LinkedIn width={25} height={25}  fill="currentColor"/>
             </a>
          </div>

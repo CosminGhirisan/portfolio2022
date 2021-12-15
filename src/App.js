@@ -18,7 +18,7 @@ function App() {
       <ThemeProvider theme={darkTheme}>
         <Routes>
           <Route exact path="/" element={<Main />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route exact path="/about" element={<AboutPage />} />
           <Route exact path="/skills" element={<MySkillsPage />} />
           <Route exact path="/projects" element={<Projects />} />
         </Routes>
