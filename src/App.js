@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./globalStyles";
-import { darkTheme, lightTheme } from './components/Themes'
+import { darkTheme } from './components/Themes'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 //Components
@@ -23,7 +23,6 @@ function App() {
           <Route exact path="/projects" element={<Projects />} />
         </Routes>
       </ThemeProvider>
-    
     </Router>
     
   );
