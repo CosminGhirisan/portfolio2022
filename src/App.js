@@ -8,6 +8,7 @@ import Main from './pages/Main'
 import AboutPage from './pages/AboutPage'
 import MySkillsPage from './pages/MySkillsPage'
 import Projects from './pages/Projects'
+import SoundBar from "./subComponents/SoundBar";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={darkTheme}>
+        <SoundBar />
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route exact path="/about" element={<AboutPage />} />

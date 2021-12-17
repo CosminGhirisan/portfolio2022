@@ -1,55 +1,105 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components'
-import { LayerLeft, LayerRight } from '../components/AllSvgs';
+import Intro from '../components/Intro';
 import PowerButton from '../subComponents/PowerButton';
 import SocialIcons from '../subComponents/SocialIcons';
+import { motion } from 'framer-motion';
 
 const Main = () => {
+   const [click, setClick] = useState(false);
+
+   const handleClick = () => setClick(!click);
+
    return (
       <>
          <MainContainer>
             <Container>
                <PowerButton />
                <SocialIcons />
-               <Center>
-                  <div>
-                     <ArrowLeft>
+               <Center click={click}>
+                  <div onClick={() => handleClick()} >
+                     <ArrowLeft click={click}>
                         &#60;
                      </ArrowLeft>
+                  </div >
+                  <div className='line' onClick={() => handleClick()}>
+                     <Line click={click}/>
                   </div>
-                  <div className='line'>
-                     <Line />
-                  </div>
-                  <div className='ArrowR'>
-                     <ArrowRight>
+                  <div className='ArrowR' onClick={() => handleClick()}>
+                     <ArrowRight click={click}>
                         &#62;
                      </ArrowRight>
                   </div>
                </Center>
                <Contact target="_blank" href="mailto:ghirisancosmin@gmail.com">
-                  <h3>
+                  <motion.h3
+                     initial={{
+                        y:-200,
+                        transition: {type: 'spring', duration: 1.5, delay: 1}
+                     }}
+                     animate={{
+                        y:0,
+                        transition: {type: 'spring', duration: 1.5, delay: 1}
+                     }}
+                     whileHover={{scale: 1.1}}
+                     whileTap={{scale: 0.9}}
+                  >
                      Say hi...
-                  </h3>
+                  </motion.h3>
                </Contact>
                <Projects to="/projects">
-                  <h3>
+                  <motion.h3
+                     initial={{
+                        y:-200,
+                        transition: {type: 'spring', duration: 1.5, delay: 1}
+                     }}
+                     animate={{
+                        y:0,
+                        transition: {type: 'spring', duration: 1.5, delay: 1}
+                     }}
+                     whileHover={{scale: 1.1}}
+                     whileTap={{scale: 0.9}}
+                  >
                      Projects.
-                  </h3>
+                  </motion.h3>
                </Projects>
                <BottomBar>
                   <About to="/about">
-                     <h3>
+                     <motion.h3
+                        initial={{
+                           y:200,
+                           transition: {type: 'spring', duration: 1.5, delay: 1}
+                        }}
+                        animate={{
+                           y:0,
+                           transition: {type: 'spring', duration: 1.5, delay: 1}
+                        }}
+                        whileHover={{scale: 1.1}}
+                        whileTap={{scale: 0.9}}
+                     >
                         About.
-                     </h3>
+                     </motion.h3>
                   </About>
                   <MySkills to="/skills">
-                     <h3>
+                     <motion.h3
+                        initial={{
+                           y:200,
+                           transition: {type: 'spring', duration: 1.5, delay: 1}
+                        }}
+                        animate={{
+                           y:0,
+                           transition: {type: 'spring', duration: 1.5, delay: 1}
+                        }}
+                        whileHover={{scale: 1.1}}
+                        whileTap={{scale: 0.9}}
+                     >
                         Skills.
-                     </h3>
+                     </motion.h3>
                   </MySkills>
                </BottomBar>
             </Container>
+            {click ? <Intro click={click}/> : null}
          </MainContainer>
       </>
    )
@@ -83,7 +133,7 @@ const Container = styled.div`
 
 const Contact = styled.a`
    position: absolute;
-   top: 2rem;
+   top: 2.5rem;
    right: calc(1rem + 2vw);
    color: ${props => props.theme.text};
    text-decoration: none;
@@ -124,8 +174,8 @@ const MySkills = styled(NavLink)`
 
 const Center = styled.button`
    position: absolute;
-   top: 50%;
-   left: 50%;
+   top: ${props => props.click ? '85%' : '50%'};
+   left: ${props => props.click ? '85%' : '50%'};
    transform: translate(-50%, -50%);
    display: flex;
    justify-content: center;
@@ -133,33 +183,36 @@ const Center = styled.button`
    color: ${props => props.theme.text};
    background: transparent;
    border: none;
-   text-decoration: none;
    outline: none;
+   text-decoration: none;
    cursor: pointer;
-   
+   transition: all 1.5s ease;
 `;
 
 const Line = styled.span`
    display: inline-block;
    width: 4px;
-   height: calc(3rem + 7vw);
+   height: ${props => props.click ? "calc(1rem + 4vw)" : "calc(3rem + 7vw)"};
    background-color: ${props => props.theme.text};
    border-radius: 2px;
-   box-shadow: 5px 27px 98px 4px rgba(0, 255, 0, 0.3), 5px 5px 35px 45px #000, 0px -46px 67px 38px rgba(30, 74, 40, 0.4), 0px 46px 67px 38px rgba(30, 74, 40, 0.8);
+   box-shadow: 0px 0px 45px 10px rgba(0, 255, 0, 0.4),
+      0px 0px 30px 45px rgba(0, 0, 0, 0.9),
+      0px 0px 75px 30px rgba(0, 255, 0, 0.3); 
+   
 `;
 
-const ArrowLeft = styled.span`
+const ArrowLeft = styled.div`
    font-family: 'Josefin Sans', sans-serif;
-   font-size: calc(3rem + 7vw);
+   font-size: ${props => props.click ? "calc(1rem + 4vw)" : "calc(3rem + 7vw)"};
    font-weight: 100;
-   margin-right: calc(1.2rem + 2vw);   
+   margin-right: ${props => props.click ? "calc(0.8rem + 1vw)" : "calc(3rem + 1vw)"}; 
 `;
 
 const ArrowRight = styled.span`
    font-family: 'Josefin Sans', sans-serif;
-   font-size: calc(3rem + 7vw);
+   font-size: ${props => props.click ? "calc(1rem + 4vw)" : "calc(3rem + 7vw)"};
    font-weight: 100;
-   margin-left: calc(1.2rem + 2vw);   
+   margin-left: ${props => props.click ? "calc(0.8rem + 1vw)" : "calc(3rem + 1vw)"};   
 `;
 
 export default Main

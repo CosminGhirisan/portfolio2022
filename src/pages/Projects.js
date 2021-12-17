@@ -1,10 +1,12 @@
 import React from 'react'
-import { LayerRight, LayerLeft } from '../components/AllSvgs'
+import PowerButton from '../subComponents/PowerButton'
+import SoundBar from '../subComponents/SoundBar'
 
 const Projects = () => {
    return (
       <div>
-         Projects
+         <PowerButton />
+         <SoundBar />
       </div>
    )
 }
