@@ -17,7 +17,7 @@ const Box = styled.div`
    transform: translate(-50%, -50%);
    width: 30vw;
    height: 3rem;
-   background-color: honeydew;
+   background-color: #cee8fa90;
    border: 5px solid #117540;
    border-radius: 2px;
 
@@ -26,7 +26,7 @@ const Box = styled.div`
       align-items: center;
       justify-content: center;
       height: 100%;
-      color: #000;
+      color: #cee8fa;
       font-family: 'Josefin Sans', sans-serif;
       font-variant: small-caps;
       letter-spacing: 2px;

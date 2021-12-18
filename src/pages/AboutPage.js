@@ -6,6 +6,7 @@ import { darkTheme } from '../components/Themes'
 import SocialIcons from '../subComponents/SocialIcons'
 import PowerButton from '../subComponents/PowerButton'
 import ParticleComponent from '../subComponents/ParticleComponent'
+import BigTitle from '../subComponents/BigTitle'
 
 const AboutPage = () => {
    return (
@@ -22,12 +23,10 @@ const AboutPage = () => {
                   The desire to always learn new things, the inclination to achieve everything as close to perfection, minuteness, punctuality and passion for technology, are just some of the qualities others around me have always appreciated.
                </p>
                <p>
-                  <span>"Today is tomorrow's history. Make your history better!" </span> &#8594; That's the way I see my life. Everything I do today will have an impact on my history, which will be read tomorrow. 
-               </p>
-               <p>
-                  This is why I find myself always trying to make my history better.
+                  <span>"Today is tomorrow's history. Make your history better!" </span> &#8594; That's the way I see my life. Everything I do today will have an impact on my history, which will be read tomorrow. This is why I find myself always trying to make my history better.
                </p>
             </Box>
+            <BigTitle text="ABOUT" top="5%" right="15%" />
          </Container>
       </ThemeProvider>
    )
