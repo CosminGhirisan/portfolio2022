@@ -4,24 +4,24 @@ export const Work = [
       name:"sToRE X - Online market - #Challenge",
       description:"Simple online market presentation with add / remove functionalities, using React.js and local storage",
       tags:["react","react-router", "api","styled-components"],
-      demo:"-",
-      github:"-"
+      demo:"https://store-x-online-market.netlify.app",
+      github:"https://github.com/CosminGhirisan/store_x_online_market"
    },
    {
       id:4,
       name:"LOL Champions - #Challenge",
-      description:"React.js with Redux, external API web application which shows LOL champions",
+      description:"React.js with Redux, external API web application which shows LOL champion. Local storage was used to save the favorites champions ",
       tags:["react","react-router", "redux","api", "axios","styled-components"],
       demo:"-",
       github:"-"
    },
    {
       id:3,
-      name:"Meditation App",
-      description:"A siple meditation app, which alows you to change the duration and also the type of the sound and video.",
+      name:"Text To Speech Converter",
+      description:"A simple application which convert given text to speech.",
       tags:["html","css","javascript"],
-      demo:"https://cosminghirisan.github.io/meditation-webapp/",
-      github:"https://github.com/CosminGhirisan/meditation-webapp"
+      demo:"https://cosminghirisan.github.io/text-to-speech-app/",
+      github:"https://github.com/CosminGhirisan/text-to-speech-app"
    },
    {
       id:2,

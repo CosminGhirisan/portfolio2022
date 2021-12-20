@@ -26,7 +26,7 @@ const Intro = () => {
                   initial={{opacity:0}}
                   animate={{opacity: 1}}
                   transition={{duration:1, delay:1.5}} 
-               >Pasionate Frontend React Developer.</motion.h6>
+               >Pasionate Frontend React.js   Developer.</motion.h6>
             </Text>
          </SubBox>
          <SubBox>

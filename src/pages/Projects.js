@@ -61,6 +61,7 @@ const Main = styled.ul`
    left: calc(10rem + 15vw);
    height: 40vh;
    display: flex;
+   align-items: center;
 `;
 
 export default Projects
