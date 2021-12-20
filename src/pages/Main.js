@@ -12,100 +12,101 @@ const Main = () => {
    const handleClick = () => setClick(!click);
 
    return (
-      <>
-         <MainContainer>
-            <Container>
-               <PowerButton />
-               <SocialIcons />
-               <Center click={click}>
-                  <div onClick={() => handleClick()} >
-                     <ArrowLeft click={click}>
-                        &#60;
-                     </ArrowLeft>
-                  </div >
-                  <div className='line' onClick={() => handleClick()}>
-                     <Line click={click}/>
-                  </div>
-                  <div className='ArrowR' onClick={() => handleClick()}>
-                     <ArrowRight click={click}>
-                        &#62;
-                     </ArrowRight>
-                  </div>
-               </Center>
-               <Contact target="_blank" href="mailto:ghirisancosmin@gmail.com">
+      <MainContainer
+         // exit={{opacity: 0.8, background: 'black'}}
+         // transition={{duration: 0.5}}
+      >
+         <Container>
+            <PowerButton />
+            <SocialIcons />
+            <Center click={click}>
+               <div onClick={() => handleClick()} >
+                  <ArrowLeft click={click}>
+                     &#60;
+                  </ArrowLeft>
+               </div >
+               <div className='line' onClick={() => handleClick()}>
+                  <Line click={click}/>
+               </div>
+               <div className='ArrowR' onClick={() => handleClick()}>
+                  <ArrowRight click={click}>
+                     &#62;
+                  </ArrowRight>
+               </div>
+            </Center>
+            <Contact target="_blank" href="mailto:ghirisancosmin@gmail.com">
+               <motion.h3
+                  initial={{
+                     y:-200,
+                     transition: {type: 'spring', duration: 1.5, delay: 1}
+                  }}
+                  animate={{
+                     y:0,
+                     transition: {type: 'spring', duration: 1.5, delay: 1}
+                  }}
+                  whileHover={{scale: 1.1}}
+                  whileTap={{scale: 0.9}}
+               >
+                  Say hi...
+               </motion.h3>
+            </Contact>
+            <Projects to="/projects">
+               <motion.h3
+                  initial={{
+                     y:-200,
+                     transition: {type: 'spring', duration: 1.5, delay: 1}
+                  }}
+                  animate={{
+                     y:0,
+                     transition: {type: 'spring', duration: 1.5, delay: 1}
+                  }}
+                  whileHover={{scale: 1.1}}
+                  whileTap={{scale: 0.9}}
+               >
+                  Projects.
+               </motion.h3>
+            </Projects>
+            <BottomBar>
+               <About to="/about">
                   <motion.h3
                      initial={{
-                        y:-200,
+                        y:200,
                         transition: {type: 'spring', duration: 1.5, delay: 1}
                      }}
                      animate={{
                         y:0,
-                        transition: {type: 'spring', duration: 1.5, delay: 1}
+                        transition: {type: 'spring', duration: 1.5, delay: 0.5}
                      }}
                      whileHover={{scale: 1.1}}
                      whileTap={{scale: 0.9}}
                   >
-                     Say hi...
+                     About.
                   </motion.h3>
-               </Contact>
-               <Projects to="/projects">
+               </About>
+               <MySkills to="/skills">
                   <motion.h3
                      initial={{
-                        y:-200,
+                        y:200,
                         transition: {type: 'spring', duration: 1.5, delay: 1}
                      }}
                      animate={{
                         y:0,
-                        transition: {type: 'spring', duration: 1.5, delay: 1}
+                        transition: {type: 'spring', duration: 1.5, delay: 0.5}
                      }}
                      whileHover={{scale: 1.1}}
                      whileTap={{scale: 0.9}}
                   >
-                     Projects.
+                     Skills.
                   </motion.h3>
-               </Projects>
-               <BottomBar>
-                  <About to="/about">
-                     <motion.h3
-                        initial={{
-                           y:200,
-                           transition: {type: 'spring', duration: 1.5, delay: 1}
-                        }}
-                        animate={{
-                           y:0,
-                           transition: {type: 'spring', duration: 1.5, delay: 0.5}
-                        }}
-                        whileHover={{scale: 1.1}}
-                        whileTap={{scale: 0.9}}
-                     >
-                        About.
-                     </motion.h3>
-                  </About>
-                  <MySkills to="/skills">
-                     <motion.h3
-                        initial={{
-                           y:200,
-                           transition: {type: 'spring', duration: 1.5, delay: 1}
-                        }}
-                        animate={{
-                           y:0,
-                           transition: {type: 'spring', duration: 1.5, delay: 0.5}
-                        }}
-                        whileHover={{scale: 1.1}}
-                        whileTap={{scale: 0.9}}
-                     >
-                        Skills.
-                     </motion.h3>
-                  </MySkills>
-               </BottomBar>
-            </Container>
-            {click ? <Intro click={click}/> : null}
-         </MainContainer>
-      </>
+               </MySkills>
+            </BottomBar>
+         </Container>
+         {click ? <Intro click={click}/> : null}
+      </MainContainer>
    )
 }
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
    position: relative;
    width: 100vw;
    height: 100vh;

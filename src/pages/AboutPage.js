@@ -7,15 +7,24 @@ import SocialIcons from '../subComponents/SocialIcons'
 import PowerButton from '../subComponents/PowerButton'
 import ParticleComponent from '../subComponents/ParticleComponent'
 import BigTitle from '../subComponents/BigTitle'
+import { motion } from 'framer-motion'
 
 const AboutPage = () => {
    return (
-      <ThemeProvider theme={darkTheme}>
-         <Container>
+      <ThemeProvider theme={darkTheme} >
+         <Container
+            // exit={{background: 'black'}}
+            // transition={{duration: 0.5}}
+         >
             <SocialIcons theme='dark'/>
             <PowerButton theme='dark'/>
             <ParticleComponent param='about'/>
-            <Box>
+            <Box
+               initial={{left: -3000}}
+               animate={{left: 'calc(5rem + 5vw)'}}
+               transition={{type: "spring", stiffness:25}}
+               
+            >
                <p>
                   My name is Cosmin and I am an automation engineer and a freelancer front-end web developer. 
                </p>
@@ -23,7 +32,7 @@ const AboutPage = () => {
                   The desire to always learn new things, the inclination to achieve everything as close to perfection, minuteness, punctuality and passion for technology, are just some of the qualities others around me have always appreciated.
                </p>
                <p>
-                  <span>"Today is tomorrow's history. Make your history better!" </span> &#8594; That's the way I see my life. Everything I do today will have an impact on my history, which will be read tomorrow. This is why I find myself always trying to make my history better.
+                  <span>"Today is tomorrow's history. Make your history better!" </span> &#8594; That's the motto of my life. Everything I do today will have an impact on my history, which will be read tomorrow. This is why I find myself always trying to make my history better.
                </p>
             </Box>
             <BigTitle text="ABOUT" top="5%" right="15%" />
@@ -32,7 +41,7 @@ const AboutPage = () => {
    )
 }
 
-const Container = styled.div`
+const Container = styled(motion.div)`
    background-color: ${props => props.theme.body};
    color: ${props => props.theme.text};
    width: 100vw;
@@ -40,7 +49,7 @@ const Container = styled.div`
    position: relative;
 `;
 
-const Box = styled.div`
+const Box = styled(motion.div)`
    position: absolute;
    top: 7rem;
    left: calc(5rem + 5vw);

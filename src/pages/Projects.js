@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
+import { motion } from 'framer-motion'
 
 //Components
 import { darkTheme } from '../components/Themes'
@@ -8,6 +9,17 @@ import PowerButton from '../subComponents/PowerButton'
 import {Work} from '../assets/data/Work'
 import Card from '../subComponents/Card'
 import BigTitle from '../subComponents/BigTitle'
+
+const container = {
+   hidden: {opacity: 0},
+   show: {
+      opacity: 1,
+      transition: {
+         staggerChildren: 0.5,
+         duration: 0.5
+      }
+   }
+}
 
 
 const Projects = () => {
@@ -26,10 +38,10 @@ const Projects = () => {
    
    return (
       <ThemeProvider theme={darkTheme}>
-         <Container>
+         <MainContainer>
             <SocialIcons theme='dark'/>
             <PowerButton theme='dark'/>
-            <Main ref={ref}>
+            <Main ref={ref} variants={container} initial="hidden" animate="show">
                {
                   Work.map(data => 
                      <Card 
@@ -40,12 +52,12 @@ const Projects = () => {
                }
             </Main>
             <BigTitle text="PROJECTS" top="10%" right="5%" />
-         </Container>
+         </MainContainer>
       </ThemeProvider>
    )
 }
 
-const Container = styled.div`
+const MainContainer = styled.div`
    background-color: ${props => props.theme.body};
    color: ${props => props.theme.text};
    height: 400vh;
@@ -55,7 +67,7 @@ const Container = styled.div`
 
 `;
 
-const Main = styled.ul`
+const Main = styled(motion.ul)`
    position: fixed;
    top: 12rem;
    left: calc(10rem + 15vw);
