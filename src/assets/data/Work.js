@@ -12,8 +12,8 @@ export const Work = [
       name:"LOL Champions - #Challenge",
       description:"React.js with Redux, external API web application which shows LOL champion. Local storage was used to save the favorites champions ",
       tags:["react","react-router", "redux","api", "axios","styled-components"],
-      demo:"-",
-      github:"-"
+      demo:"https://champs-lol-champions.netlify.app",
+      github:"https://github.com/CosminGhirisan/react_app_api_champions_local_storage"
    },
    {
       id:3,
