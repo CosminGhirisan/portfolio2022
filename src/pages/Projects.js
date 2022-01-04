@@ -64,7 +64,7 @@ const MainContainer = styled.div`
    position: relative;
    overflow: hidden;
    overflow: auto;
-
+   
 `;
 
 const Main = styled(motion.ul)`

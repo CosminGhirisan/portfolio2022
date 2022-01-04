@@ -1,5 +1,13 @@
 export const Work = [
    {
+      id:6,
+      name:"Herbam08 - Plant Care App",
+      description:"This is a simple webapp where I like to keep all the information about my plants.",
+      tags:["react","react-router", "firebase","styled-components"],
+      demo:"https://herbam08.netlify.app",
+      github:"https://github.com/CosminGhirisan/herbam08_plant_app_react.js"
+   },
+   {
       id:5,
       name:"sToRE X - Online market - #Challenge",
       description:"Simple online market presentation with add / remove functionalities, using React.js and local storage",
