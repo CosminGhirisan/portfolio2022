@@ -4,8 +4,8 @@ export const Work = [
       name:"Herbam08 - Plant Care App",
       description:"This is a simple webapp where I like to keep all the information about my plants.",
       tags:["react","react-router", "firebase","styled-components"],
-      demo:"https://herbam08.netlify.app",
-      github:"https://github.com/CosminGhirisan/herbam08_plant_app_react.js"
+      demo:"https://herbam08.web.app/login",
+      github:"https://github.com/CosminGhirisan/bamherbam08_plant_app_react.js"
    },
    {
       id:5,
