@@ -16,17 +16,20 @@ const Intro = () => {
                   initial={{opacity:0}}
                   animate={{opacity: 1}}
                   transition={{duration:1, delay:1.1}}
-               >Hi,</motion.h1>
+               >Hi,
+               </motion.h1>
                <motion.h3
                   initial={{opacity:0}}
                   animate={{opacity: 1}}
                   transition={{duration:1, delay:1.3}}   
-               >I'm Cosmin.</motion.h3>
+               >I'm Cosmin.
+               </motion.h3>
                <motion.h6
                   initial={{opacity:0}}
                   animate={{opacity: 1}}
                   transition={{duration:1, delay:1.5}} 
-               >Pasionate Frontend React.js   Developer.</motion.h6>
+               >Pasionate Frontend React.js   Developer.
+               </motion.h6>
             </Text>
          </SubBox>
          <SubBox>
@@ -53,12 +56,22 @@ const Box = styled(motion.div)`
    border: 1px solid white;
    box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.5), 0px 0px 1px 1px rgba(255, 255, 255, 0.5) inset;   
    z-index: 1;
+   overflow: hidden;
+
+   @media only screen and (max-width: 768px){
+      flex-direction: column;
+      justify-content: space-around;
+      min-height: 40vh;
+   }
 `;
 
 const SubBox = styled.div`
    width: 50%;
    position: relative;
    display: flex;
+   @media only screen and (max-width: 768px){
+      width: 100%;
+   }
 `;
 
 const Text = styled(motion.div)`
@@ -72,12 +85,20 @@ const Text = styled(motion.div)`
 
    h1, h3{
       font-family: 'Josefin Sans', sans-serif;
+
+      @media only screen and (max-width: 768px){
+         font-size: calc(1rem + 1.5vw);
+      }
    }
 
    h6{
       color: ${props => `rgba(${props.theme.textRgba}, 0.6)`};
       font-size: calc(0.2rem + 1.5vw);
       font-weight: 100;
+
+      @media only screen and (max-width: 768px){
+         font-size: calc(0.6rem + 1.5vw);
+      }
    }
 `; 
 

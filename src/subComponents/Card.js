@@ -56,6 +56,10 @@ const Box = styled(motion.div)`
    border: 1px solid ${props => props.theme.body};
    transition: all 0.2s ease;
 
+   @media only screen and (max-height: 500px){
+         height: 60vh;
+      }
+
    :hover{
       background-color: ${props => props.theme.body};
       color: ${props => props.theme.text};

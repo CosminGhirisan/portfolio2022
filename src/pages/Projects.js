@@ -74,6 +74,10 @@ const Main = styled(motion.ul)`
    height: 40vh;
    display: flex;
    align-items: center;
+
+   @media only screen and (max-height: 500px){
+         top: 8rem;
+      }
 `;
 
 export default Projects

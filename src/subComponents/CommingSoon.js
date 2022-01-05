@@ -21,6 +21,10 @@ const Box = styled.div`
    border: 5px solid #117540;
    border-radius: 2px;
 
+   @media only screen and (max-width: 768px){
+      width: 60vw;
+   }
+
    h2{
       display: flex;
       align-items: center;

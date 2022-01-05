@@ -74,6 +74,19 @@ const Box = styled(motion.div)`
    overflow: scroll;
    z-index: 3;
 
+   @media only screen and (max-height: 550px){
+      margin-bottom: 5rem;
+      padding-top: calc(5rem + 7vh);
+      width: 70vw;
+      height: 25vh;
+      top: 5rem;
+   }
+
+   @media only screen and (max-height: 360px){
+      width: 72vw;
+      height: 20vh;
+   }
+
    p:not(:last-child){
       padding-bottom: 1rem;
    }
