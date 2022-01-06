@@ -83,11 +83,16 @@ const Text = styled(motion.div)`
    flex-direction: column;
    justify-content: space-evenly;
 
+   @media only screen and (max-width: 768px){
+         
+      }
+
    h1, h3{
       font-family: 'Josefin Sans', sans-serif;
 
       @media only screen and (max-width: 768px){
          font-size: calc(1rem + 1.5vw);
+         margin-bottom: 1rem;
       }
    }
 
