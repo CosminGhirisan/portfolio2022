@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import styled, { keyframes } from 'styled-components'
-import music from '../assets/music/heroes-tonight-feat-johnning-ncs-release.mp3'
+import music from '../assets/music/orchestral-piano-music.mp3'
 
 const SoundBar = () => {
    const ref = useRef(null)
