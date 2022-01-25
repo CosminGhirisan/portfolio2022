@@ -2,7 +2,7 @@
 
 [LIVE SITE](https://cosmin-ghirisan-portfolio.netlify.app)
 
-![Project Image](https://ibb.co/b5PrH2G)
+![Project Image](https://i.postimg.cc/0yXwXw7H/Portfolio2022.png)
 ___
 
 ### Description
